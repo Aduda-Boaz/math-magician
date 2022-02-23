@@ -1,0 +1,41 @@
+.calc {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  width: 35vw;
+  height: 70vh;
+  background-color: rgb(221, 206, 206);
+  border-radius: 10px;
+  margin: 15rem;
+}
+
+.display {
+  display: flex;
+  grid-column: 1 / -1;
+  justify-content: flex-end;
+  padding: 20px;
+  color: rgb(26, 36, 25);
+  font-size: 18px;
+  background-color: rgba(212, 243, 243, 0.966);
+}
+
+.button {
+  all: unset;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  padding: 5px 8px;
+  border: 1px solid beige;
+}
+
+.button:active {
+  background-color: darkslategrey;
+}
+
+.base {
+  grid-column: 1 / span 2;
+}
+
+.dark {
+  background-color: rgb(238, 153, 92);
+}

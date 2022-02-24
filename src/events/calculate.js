@@ -1,32 +1,30 @@
-import Big from 'big-js';
+import Big from 'big.js';
 
-const calculate = (numOne, numTwo, calculation) => {
-  const one = Big(numOne);
-  const two = Big(numTwo);
-  if (calculation === '+') {
+export default function operate(numberOne, numberTwo, operation) {
+  const one = Big(numberOne);
+  const two = Big(numberTwo);
+  if (operation === '+') {
     return one.plus(two).toString();
   }
-  if (calculation === '-') {
+  if (operation === '-') {
     return one.minus(two).toString();
   }
-  if (calculation === '*') {
+  if (operation === '*') {
     return one.times(two).toString();
   }
-  if (calculation === '/') {
+  if (operation === '/') {
     try {
-      return one.divide(two).toString();
-    } catch (error) {
-      return 'Not divisible by 0.';
+      return one.div(two).toString();
+    } catch (err) {
+      return "Can't divide by 0.";
     }
   }
-  if (calculation === '%') {
+  if (operation === '%') {
     try {
-      return one.mod(two).toString;
-    } catch (error) {
-      return 'Module not found, not divisible by 0.';
+      return one.mod(two).toString();
+    } catch (err) {
+      return "Can't find modulo as can't divide by 0.";
     }
   }
-  throw Error(`Unknown calculation '${calculation}'`);
-};
-
-export default calculate;
+  throw Error(`Unknown operation '${operation}'`);
+}

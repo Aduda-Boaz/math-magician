@@ -8,7 +8,7 @@ class Calculator extends Component {
     this.state = {
       total: 0,
       next: null,
-      calculation: null,
+      operation: null,
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -19,12 +19,12 @@ class Calculator extends Component {
   }
 
   render() {
-    const { total, next, calculation } = this.state;
+    const { total, next, operation } = this.state;
     return (
       <div className="calc">
         <div className="display">
           { total }
-          { calculation }
+          { operation }
           { next }
         </div>
         <button type="button" onClick={this.handleClick} className="button">AC</button>

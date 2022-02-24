@@ -91,7 +91,6 @@ export default function calculate(obj, buttonName) {
     };
   }
 
-
   if (!obj.next) {
     return { operation: buttonName };
   }

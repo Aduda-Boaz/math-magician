@@ -23,7 +23,7 @@ const calculate = (numOne, numTwo, calculation) => {
     try {
       return one.mod(two).toString;
     } catch (error) {
-      return 'Module not found, not divisible by 0.'
+      return 'Module not found, not divisible by 0.';
     }
   }
   throw Error(`Unknown calculation '${calculation}'`);

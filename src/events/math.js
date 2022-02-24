@@ -55,7 +55,7 @@ export default function maths(ob, btnName) {
   if (btnName === '=') {
     if (ob.next && ob.calculation) {
       return {
-        total: (ob.total, ob.next, ob.calculation),
+        total: calculate(ob.total, ob.next, ob.calculation),
         next: null,
         calculation: null,
       };
@@ -71,4 +71,28 @@ export default function maths(ob, btnName) {
     }
     return {};
   }
+
+  if (!ob.next && ob.total && !ob.calculation) {
+    return { ...ob, calculation: btnName };
+  }
+
+  if (ob.calculation) {
+    if (ob.total && !ob.next) {
+      return { ...ob, calculation: btnName };
+    }
+    return {
+      total: calculate(ob.total, ob.next, ob.calculation),
+      next: null,
+      calculation: btnName,
+    };
+  }
+
+  if (!ob.next) {
+    return { calculation: btnName };
+  }
+  return {
+    total: ob.next,
+    next: null,
+    calculation: btnName,
+  };
 }

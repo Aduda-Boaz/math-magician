@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<section>
+  <h3>
+     Welcome to the Best Experience!
+  </h3>
+  <p>
+    Life is a math education, in order to gain the most, you have to convert the negatives into positives
+  </p>
+</section>
+`;

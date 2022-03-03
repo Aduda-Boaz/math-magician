@@ -5,7 +5,7 @@ function NavBar() {
   return (
     <nav>
       <div>
-        <NavLink className="logo" to="/math-magician">
+        <NavLink className="logo" to="/Home">
           Simple Maths
         </NavLink>
       </div>
@@ -13,7 +13,7 @@ function NavBar() {
         <li>
           <NavLink
             className={({ isActive }) => (isActive ? 'active' : '')}
-            to="/math-magicians"
+            to="/Home"
           >
             Home
           </NavLink>

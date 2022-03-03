@@ -24,7 +24,7 @@ class App extends Component {
           <section className="app-content">
             <Routes>
               <Route
-                path="/math-magicians"
+                path="/Home"
                 element={<Home />}
               />
               <Route

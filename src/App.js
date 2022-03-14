@@ -18,27 +18,25 @@ class App extends Component {
 
   render() {
     return (
-      <>
-        <Router>
-          <NavBar />
-          <section className="app-content">
-            <Routes>
-              <Route
-                path="/Home"
-                element={<Home />}
-              />
-              <Route
-                path="/Calculator"
-                element={<Calculator className="calculator" />}
-              />
-              <Route
-                path="/Quote"
-                element={<Quote />}
-              />
-            </Routes>
-          </section>
-        </Router>
-      </>
+      <Router>
+        <NavBar />
+        <section className="app-content">
+          <Routes>
+            <Route
+              path="/Home"
+              element={<Home />}
+            />
+            <Route
+              path="/Calculator"
+              element={<Calculator className="calculator" />}
+            />
+            <Route
+              path="/Quote"
+              element={<Quote />}
+            />
+          </Routes>
+        </section>
+      </Router>
     );
   }
 }
